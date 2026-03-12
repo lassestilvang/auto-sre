@@ -29,3 +29,8 @@
   - [x] Create a one-slide architecture diagram (Mermaid added to README).
   - [x] Write a 90-second elevator pitch for the demo script.
   - [ ] Record the golden-path 2-minute demo video (User Action Required).
+
+- [x] **Phase 7: Infrastructure as Code (Bicep)**
+  - [x] Create Bicep template for Log Analytics and App Insights.
+  - [x] Create Bicep template for Azure Container Apps Environment and Service.
+  - [x] Create Bicep template for high-CPU Alert Rules.

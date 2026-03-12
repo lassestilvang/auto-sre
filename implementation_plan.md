@@ -45,10 +45,13 @@ To ensure reviewers see coverage, our deliverables map directly to the criteria:
   - Architecture diagram (Chaos $\rightarrow$ ACA $\rightarrow$ Monitor $\rightarrow$ Event Grid $\rightarrow$ SRE Agent $\rightarrow$ Mitigation $\rightarrow$ Score $\rightarrow$ Dashboard).
   - Concise project description and polished README.
 
+- **Phase 7: Infrastructure as Code (Bicep)**: Automating the deployment of Container Apps, Log Analytics, and Alert Rules to ensure a repeatable demo environment.
+
 ## Verification Plan
 
 ### Automated Tests
 - Test the Chaos Agent logic locally.
+- Validate Bicep templates using `az bicep build`.
 
 ### Manual Verification
 1. Deploy the Demo Service to Azure Container Apps.
