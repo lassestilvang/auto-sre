@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import PlainTextResponse
 from pydantic import BaseModel
 from datetime import datetime, timezone
 import multiprocessing
@@ -8,6 +9,7 @@ import time
 import os
 from typing import Optional
 import uuid
+from pathlib import Path
 
 app = FastAPI(title="AutoSRE Demo Service")
 
@@ -28,6 +30,8 @@ STATE = {
     "resilienceScore": 100,
     "chaosRunning": False,
 }
+BASE_DIR = Path(__file__).resolve().parents[2]
+DOCS_API_PATH = BASE_DIR / "docs" / "api.md"
 
 
 class EventIn(BaseModel):
@@ -89,6 +93,13 @@ async def events(limit: int = 50):
     safe_limit = max(1, min(limit, MAX_EVENTS))
     with EVENT_LOCK:
         return {"events": EVENTS[:safe_limit]}
+
+
+@app.get("/docs/api.md", response_class=PlainTextResponse)
+async def docs_api():
+    if not DOCS_API_PATH.exists():
+        raise HTTPException(status_code=404, detail="API docs not found.")
+    return DOCS_API_PATH.read_text(encoding="utf-8")
 
 
 @app.post("/events")

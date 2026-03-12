@@ -84,6 +84,10 @@ Create a local `.env` from `.env.example` and adjust if needed:
 2. **Start Dashboard**: `cd ui/dashboard && npm install && npm run dev`
 3. **Run Chaos**: `cd agents/chaos-agent && pip install -r requirements.txt && python chaos_agent.py`
 
+### One-Command Demo
+Use the helper script to start the API + dashboard and run a smoke test:
+`./scripts/demo.sh`
+
 ### Quick Start (Container Image)
 1. **Build**: `cd services/demo-service && docker build -t auto-sre-demo .`
 2. **Deploy**: Use `infra/main.bicep` with `containerImage` set to your pushed image

@@ -13,6 +13,10 @@ npm run dev
 
 Set `VITE_API_BASE_URL` to the demo service base URL (default expected: `http://localhost:8080`).
 
+## Docs Page
+
+Visit `/docs` in the dashboard to view the rendered API documentation.
+
 ## Build
 
 ```bash
