@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(59, 130, 246, 0.4) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.4);
+  border-radius: 999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
