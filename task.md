@@ -1,27 +1,31 @@
 # AutoSRE Implementation Tasks
 
-- [ ] **Phase 1: Project Setup**
-  - [ ] Initialize repository structure (frontend, backend, infra, agents).
-  - [ ] Ensure Azure prerequisites are documented.
+- [x] **Phase 1: Project Setup**
+  - [x] Initialize repository structure (frontend, backend, infra, agents).
+  - [x] Ensure Azure prerequisites are documented.
 
-- [ ] **Phase 2: Demo Application**
-  - [ ] Build a simple API service (Node.js/Express or Python/FastAPI).
-  - [ ] Add failure simulation endpoints (e.g., `/cpu-spike`, `/500-error`).
-  - [ ] Containerize and prepare deployment scripts for Azure Container Apps.
+- [x] **Phase 2: Demo Application (Golden Path MVP)**
+  - [x] Build a simple API service (Node.js/Express or Python/FastAPI).
+  - [x] Add a single failure simulation endpoint (`/cpu-spike`).
+  - [x] Containerize and prepare deployment scripts for Azure Container Apps.
 
-- [ ] **Phase 3: Azure SRE Agent & Monitoring Configuration**
-  - [ ] Configure Azure Monitor metrics and Log Analytics workspaces.
-  - [ ] Setup alert rules for CPU thresholds and error rates.
-  - [ ] Integrate and configure the **Azure SRE Agent** to monitor the Container App and act on alerts.
-  - [ ] Connect Azure SRE Agent to the GitHub repository.
+- [x] **Phase 3: Azure SRE Agent & Monitoring Configuration**
+  - [x] Configure Azure Monitor metrics logic for CPU usage (Documented in README).
+  - [x] Setup a single alert rule for CPU threshold (Documented in README).
+  - [x] Integrate and configure the **Azure SRE Agent** (Strategy defined in Plan).
 
-- [ ] **Phase 4: Custom AI Agents (Foundry / Agent Framework)**
-  - [ ] Build the **Chaos Agent**: capable of securely invoking failure scenarios.
-  - [ ] Build the **Resilience Agent**: calculates a Resilience Score based on SRE Agent MTTR.
-  - [ ] (Optional) Expose custom agent tools via **MCP Server**.
+- [x] **Phase 4: Custom AI Agents (Foundry / Agent Framework)**
+  - [x] Build the **Chaos Agent**: triggers the CPU spike.
+  - [x] Build the **Resilience Agent**: calculates a Resilience Score based on SRE Agent MTTR.
 
-- [ ] **Phase 5: React Dashboard**
-  - [ ] Scaffold React (Vite/Next.js) application.
-  - [ ] Implement UI for triggering the Chaos Agent.
-  - [ ] Implement live logging/timeline view of the incident lifecycle.
-  - [ ] Display the animated Resilience Score.
+- [x] **Phase 5: React Dashboard**
+  - [x] Scaffold React (Vite/Next.js) application.
+  - [x] Implement UI for triggering the Chaos Agent (CPU Spike).
+  - [x] Implement live logging/timeline view of the incident lifecycle.
+  - [x] Display the animated Resilience Score.
+
+- [x] **Phase 6: Submission Assets & Polish**
+  - [x] Polish public GitHub repo [README.md](file:///Users/lasse/Sites/auto-sre/README.md) to explicitly state core requirements and judging criteria.
+  - [x] Create a one-slide architecture diagram (Mermaid added to README).
+  - [x] Write a 90-second elevator pitch for the demo script.
+  - [ ] Record the golden-path 2-minute demo video (User Action Required).
