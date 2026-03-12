@@ -88,6 +88,14 @@ Create a local `.env` from `.env.example` and adjust if needed:
 1. **Build**: `cd services/demo-service && docker build -t auto-sre-demo .`
 2. **Deploy**: Use `infra/main.bicep` with `containerImage` set to your pushed image
 
+### Demo API
+The dashboard reads its live data from the demo service API:
+- `/state` for status and resilience score
+- `/events` for the incident timeline
+- `/cpu-spike` to trigger a chaos run
+
+Full endpoint details live in `./docs/api.md`.
+
 ---
 
 Built with ❤️ for the Azure AI Dev Days Hackathon 2026.

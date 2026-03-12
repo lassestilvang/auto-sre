@@ -152,7 +152,7 @@ function App() {
 
   return (
     <LazyMotion features={domAnimation}>
-    <MotionConfig reducedMotion="user">
+    <MotionConfig reducedMotion={reduceMotion ? "always" : "never"}>
     <div className="min-h-screen bg-slate-950 text-slate-200 p-8 font-sans selection:bg-blue-500/30">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
