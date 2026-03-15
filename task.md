@@ -25,7 +25,7 @@
   - [x] Display the animated Resilience Score.
 
 - [x] **Phase 6: Submission Assets & Polish**
-  - [x] Polish public GitHub repo [README.md](file:///Users/lasse/Sites/auto-sre/README.md) to explicitly state core requirements and judging criteria.
+  - [x] Polish public GitHub repo [README.md](README.md) to explicitly state core requirements and judging criteria.
   - [x] Create a one-slide architecture diagram (Mermaid added to README).
   - [x] Write a 90-second elevator pitch for the demo script.
   - [ ] Record the golden-path 2-minute demo video (User Action Required).
